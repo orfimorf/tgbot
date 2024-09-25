@@ -23,7 +23,7 @@ async function getRandomLineFromCSV() {
     });
 }
 
-const bot = new Telegraf(process.env.TOKEN);
+const bot = new Telegraf(process.env.TG_TOKEN);
 bot.start((ctx) => ctx.reply('Welcome'));
 bot.command('motivation', async (ctx) => {
     const {Author, Quote} = await getRandomLineFromCSV()
